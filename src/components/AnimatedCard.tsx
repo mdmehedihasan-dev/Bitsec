@@ -12,7 +12,7 @@ interface AnimatedCardProps {
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.42, 0, 0.58, 1] } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeInOut' } },
   hover: { scale: 1.02, transition: { duration: 0.2 } },
   tap: { scale: 0.98, transition: { duration: 0.2 } },
 };
@@ -30,7 +30,7 @@ export const AnimatedCard = ({ children, delay = 0, className, onClick }: Animat
         visible: { 
           ...cardVariants.visible, 
           transition: { 
-            ...cardVariants.visible.transition, 
+            ...(cardVariants.visible.transition as object), 
             delay 
           } 
         },
