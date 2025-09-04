@@ -60,7 +60,7 @@ export default function UserDetailsPage({ params }: UserDetailsProps) {
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="mb-4 text-blue-600 hover:underline flex items-center"
+          className="mb-4  hover:underline rounded-md flex bg-[#e5e7eb] py-2 px-3 items-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
